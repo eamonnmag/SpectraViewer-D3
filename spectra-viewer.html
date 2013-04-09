@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <style>
+            /* Custom container */
+        .container-narrow {
+            margin: 0 auto;
+            max-width: 700px;
+        }
+
+        .container-narrow > hr {
+            margin: 30px 0;
+        }
+
+        div#post {
+            width: 700;
+            height: 210;
+        }
+
+        .extent {
+            fill: #000;
+            fill-opacity: .125;
+            stroke: #fff;
+        }
+
+        .axis-y path,
+        .axis-y line,
+        .axis-x path,
+        .axis-x line {
+            fill: none;
+            stroke: black;
+            shape-rendering: crispEdges;
+        }
+
+        rect {
+            fill-opacity: .7;
+        }
+
+        rect.hidden {
+            fill: #ccc !important;
+        }
+
+
+    </style>
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/lib/underscore-min.js"></script>
+    <script type="text/javascript" src="js/lib/d3.v2.min.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/viewer.js"></script>
+</head>
+<body>
+<div class="container-narrow">
+    <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About SpectraViewer</a></li>
+        </ul>
+        <h3 class="muted">SpectraViewer</h3>
+    </div>
+
+    <div id="post"></div>
+</div>
+
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+        <h3 id="myModalLabel">Spectra Details</h3>
+    </div>
+    <div class="modal-body">
+
+        <p>Corresponds to Caffeine<br/>
+
+        <div align="center">
+            <img src="http://www.ebi.ac.uk/chebi/displayImage.do;?defaultImage=true&imageIndex=0&chebiId=27732"
+                 alt="CHEBI"/>
+            <br/>
+            <a class="btn btn-info">View in ChEBI</a>
+        </div>
+        </p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    draw()
+</script>
+</body>
+</html>
